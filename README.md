@@ -1,2 +1,2 @@
 # ananyaRepo
-A sample.txt file added in this repository
+A sample.txt and index.html file added in this repository
