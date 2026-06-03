@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+    color: white;
+}
+
+.petrol-header {
+    background-color: #1a252f;
+    padding: 10px 0;
+}
+
+.logo-text {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+}
+
+.nav-custom a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* FIX: Placeholder Visibility */
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important; /* Made significantly brighter */
+    font-weight: 300;
+}
+
+/* FIX: Card Spacing for Desktop */
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 45px;
+    padding: 40px 35px; /* Reduced vertical padding slightly */
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto; /* Keeps it from hitting edges */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* FIX: Navigation spacing */
+.nav-custom {
+    background: rgba(0, 0, 0, 0.2); /* Slight background to separate from body */
+    margin-bottom: 10px;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 45px; /* Softer rounded corners from your design */
+    padding: 50px 35px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-input {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 14px 20px;
+    color: white !important;
+    width: 100%;
+}
+
+.btn-login {
+    background-color: #4CAF50 !important;
+    border: none;
+    border-radius: 15px;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #45a049 !important;
+    transform: translateY(-2px);
+}
+
+.btn-signup-outline {
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    padding: 14px;
+    font-size: 1.1rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.divider:not(:empty)::before { margin-right: 15px; }
+.divider:not(:empty)::after { margin-left: 15px; }
+
+/* Fixed Footer Logic */
+.footer-text {
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+/* Fix for the long About Us card to scroll nicely */
+.about-card {
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Fix for textarea appearance */
+textarea.glass-input {
+    resize: none;
+}
+/* Spending Circle */
+.spending-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #b91d1d, #7f1d1d);
+    border: 3px solid #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.amount { font-size: 2rem; font-weight: 700; }
+.currency { font-size: 1.2rem; margin-right: 5px; }
+
+/* Stats Box */
+.spending-summary-card {
+    background: linear-gradient(180deg, rgba(127, 29, 29, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    border: 1px solid #4CAF50;
+    border-radius: 20px;
+}
+
+.month-selector {
+    background: rgba(255,255,255,0.1);
+    border-radius: 50px;
+    padding: 8px 20px;
+    border: 1px solid #4CAF50;
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.9); /* White glass for better contrast */
+    border-radius: 20px;
+    padding: 15px;
+    height: 250px; /* Force a height so the chart isn't 0px tall */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+/* Profile Image Styling */
+.profile-pic-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Edit Button Color (Orange from Design) */
+.btn-edit {
+    background-color: #d37c15 !important;
+    border: none;
+    border-radius: 15px;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: #b56a12 !important;
+    transform: translateY(-2px);
+}
+
+/* Read-only appearance for glass-input on profile */
+div.glass-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    cursor: default;
+}
+
+/* Ensure profile inputs look clean and centered */
+#profile-form .glass-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-weight: 500;
+}
+
+#profile-form .glass-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-color: #d37c15; /* Match the orange edit button */
+}
+
+.petrol-table thead th:first-child { border-radius: 10px 0 0 10px; }
+.petrol-table thead th:last-child { border-radius: 0 10px 10px 0; }
+
+.clickable-row {
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.clickable-row:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.02);
+}
+
+/* Ensure the table container handles many columns */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+}
+
+.petrol-table {
+    min-width: 800px; /* Forces scroll on small screens instead of squishing */
+    color: white;
+}
+
+.petrol-table thead th {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a252f;
+    padding: 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.clickable-row td {
+    padding: 15px 10px;
+    font-size: 0.85rem;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Zebra striping for clarity */
+.clickable-row:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.login-extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 0 5px;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .login-extras {
+        flex-direction: row; /* Keeps them side-by-side but scales text */
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure Profile inputs are centered as requested */
+#profile-form .glass-input {
+    text-align: center;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Add Entry - PetrolTrack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="manifest.json">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <header class="petrol-header text-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/483/483497.png" alt="logo" width="35">
+        <div class="text-white mt-1 logo-text">PetrolTrack App</div>
+    </header>
+
+    <nav class="nav-custom d-flex justify-content-around py-3">
+        <a href="home.html">Home</a>
+        <a href="about.html">AboutUs</a>
+        <a href="contact.html">ContactUs</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+<main class="flex-grow-1 d-flex justify-content-center py-4">
+    <div class="glass-container text-center text-white">
+        <form id="entryForm" onsubmit="handleNewEntry(event)">
+            <input type="date" id="entryDate" class="glass-input mb-3" required>
+            
+            <input type="number" id="petrolPrice" class="glass-input mb-3" step="0.01" placeholder="Total Petrol Price *" oninput="calculateLitres()" required>
+            
+            <input type="text" id="place" class="glass-input mb-3" placeholder="Place">
+            
+            <input type="number" id="pricePerLitre" class="glass-input mb-3" step="0.01" placeholder="Petrol Price Per Litre" oninput="calculateLitres()">
+            
+            <input type="number" id="litre" class="glass-input mb-3" placeholder="Litre (Calculated)" step="0.01" readonly>
+
+            <input type="text" id="vehicle" class="glass-input mb-3" placeholder="Vehicle Name (e.g. Altroz)">
+
+            <textarea id="notes" class="glass-input mb-4" placeholder="Notes" rows="2"></textarea>
+
+            <div class="d-flex gap-3">
+                <button type="submit" class="btn btn-login w-100 text-white">Save</button>
+                <button type="reset" class="btn btn-outline-light w-100" style="border-radius:15px;">Clear</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+    <footer class="text-center text-white py-4 mt-auto footer-text">
+        Developed by AnanyaRao. © 2025 PetrolTrack App.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
