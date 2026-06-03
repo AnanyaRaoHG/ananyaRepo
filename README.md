@@ -8,9 +8,9 @@ Welcome to my project repository! This repository showcases a collection of my w
 
 | Project | Type | Tech Stack / Tools | Core Focus |
 | :--- | :--- | :--- | :--- |
-|Personal Portfolio | Frontend Dev | HTML5, CSS3, JavaScript | Responsive Design, Performance |
-|SaveTrack App | Product Design & Dev | Figma, HTML5, CSS3, JavaScript | Finacle-inspired Logic, WCAG Accessibility |
-|PetrolTrack App | Product Design & Dev | Figma, HTML5, CSS3, JavaScript | Data Visualization, Expense Tracking |
+|**[Personal Portfolio](#1-portfolio-website)**| Frontend Dev | HTML5, CSS3, JavaScript | Responsive Design, Performance |
+|**[SaveTrack App](#2-savetrack-app)**| Product Design & Dev | Figma, HTML5, CSS3, JavaScript | Finacle-inspired Logic, WCAG Accessibility |
+|**[PetrolTrack App](#3-petroltrack-app)**| Product Design & Dev | Figma, HTML5, CSS3, JavaScript | Data Visualization, Expense Tracking |
 
 ---
 
