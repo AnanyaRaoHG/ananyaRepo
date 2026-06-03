@@ -1,3 +1,0 @@
-#Example Repository
-
-Hello World !!
