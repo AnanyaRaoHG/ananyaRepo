@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Monthly Savings</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(reg => console.log('Service Worker registered: ', reg))
+                    .catch(err => console.log('Service Worker registration failed: ', err));
+            });
+        }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Monthly Savings</h1>
+  <button onclick="location.href='add.html'">➕ Add Month</button>
+</header>
+
+<div class="data-vault-card">
+    <div class="vault-info">
+        <h3><i class="fas fa-database"></i> Data Vault</h3>
+        <p>Backup locally to keep data safe from browser cleanup.</p>
+    </div>
+    <div class="vault-btns">
+        <button onclick="exportData()" class="v-btn v-btn-primary">
+            📥 Download
+        </button>
+        <input type="file" id="importFile" onchange="importData(event)" style="display:none;">
+        <button onclick="document.getElementById('importFile').click()" class="v-btn v-btn-outline">
+            📤 Restore
+        </button>
+    </div>
+</div>
+
+<div class="filters">
+  <label>Filter Month:
+    <select id="monthFilter">
+      <option value="all">All</option>
+    </select>
+  </label>
+
+  <label>Sort:
+    <select id="sortOrder">
+      <option value="desc">Newest First</option>
+      <option value="asc">Oldest First</option>
+    </select>
+  </label>
+</div>
+
+<div id="cardContainer"></div>
+ <!-- Action Modal -->
+  <div id="actionModal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalMonth"></h3>
+      <button id="viewBtn">👁️ View Details</button>
+      <button id="editBtn">✏️ Edit Month</button>
+      <button type="button" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Details Modal -->
+  <div id="detailsModal" class="modal hidden">
+    <div class="modal-content">
+      <div id="detailsContent"></div>
+      <button type="button" onclick="closeDetails()">Close</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

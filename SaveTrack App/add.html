@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Month</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <button type="button" onclick="goBack()">← Back</button>
+    <h2 id="pageTitle">Add Month</h2>
+  </header>
+  
+  <div class="form">
+  <div class="input-group">
+    <label>Month Selection</label>
+	<br/><br/>
+    <input type="month" id="month" />
+  </div>
+
+  <h3>Income Source</h3>
+  <div class="input-grid">
+    <div class="field">
+      <label>Salary</label>
+      <input type="text" placeholder="₹0" id="salary" inputmode="numeric" pattern="[0-9]*" />
+    </div>
+    <div class="field">
+      <label>Bonus</label>
+      <input type="text" placeholder="₹0" id="bonus" inputmode="numeric" pattern="[0-9]*" />
+    </div>
+  </div>
+
+  <h3>Expenses Breakdown</h3>
+  <div class="field full-width">
+    <label>Total Budgeted Expense</label>
+    <input type="text" placeholder="₹0" id="totalExpense" inputmode="numeric" pattern="[0-9]*" />
+  </div>
+
+  <div class="input-grid">
+    <div class="field"><label>Grocery</label><input type="text" id="grocery" inputmode="numeric" /></div>
+    <div class="field"><label>Petrol</label><input type="text" id="petrol" inputmode="numeric" /></div>
+    <div class="field"><label>Investment</label><input type="text" id="investment" inputmode="numeric" /></div>
+    <div class="field"><label>Credit Card</label><input type="text" id="credit" inputmode="numeric" /></div>
+	<div class="field"><label>Ebill</label><input type="text" id="ebill" inputmode="numeric" /></div>
+    <div class="field"><label>Food</label><input type="text" id="food" inputmode="numeric" /></div>
+    <div class="field"><label>Entertainment</label><input type="text" id="movie" inputmode="numeric" /></div>
+    <div class="field"><label>FastTag</label><input type="text" id="fast" inputmode="numeric" /></div>
+    <div class="field"><label>Custom</label><input type="text" id="custom" inputmode="numeric" /></div>
+    <div class="field"><label>Extra (Auto)</label><input type="text" id="extraAmount" readonly style="background:#eeeeee;"/></div>
+  </div>
+
+  <button type="button" id="saveBtn" class="save-button">Save Monthly Data</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
